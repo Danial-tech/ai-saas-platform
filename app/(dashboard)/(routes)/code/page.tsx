@@ -70,7 +70,7 @@ const CodePage = () => {
       />
       <div className="px-4 lg:px-8">
         <div>
-          <Form {...form}></Form>
+          <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
               className="rounded-lg border w-full p-4 px-3 
