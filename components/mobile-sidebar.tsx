@@ -6,7 +6,11 @@ import { Button } from "./ui/button";
 import { Sheet, SheetTrigger, SheetContent } from "./ui/sheet";
 import Sidebar from "./sidebar";
 
-const MobileSidebar = () => {
+interface MobileSideBarProps {
+    apiLimitCount: number;
+}
+
+const MobileSidebar = ({apiLimitCount}: MobileSideBarProps) => {
     const [isMounted, setIsMounted] = useState(false);
     useEffect(()=> {
         setIsMounted(true);
@@ -24,7 +28,7 @@ const MobileSidebar = () => {
                 </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-0">
-                <Sidebar/>
+                <Sidebar apiLimitCount={apiLimitCount}/>
             </SheetContent>
         </Sheet>
         
